@@ -1,0 +1,154 @@
+  :root{
+ 
+
+    
+    --paper:#eef2f0;
+    --card:#tra;
+    --line:#060707;
+    --signal:#B5E479;
+    
+  }
+
+
+
+/* ---------- NEWS ---------- */
+
+.consent-bar{
+    display:block;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    background:var(--card);
+    padding:0px 0px 14px 0px ;
+    margin-bottom:8px;
+    font-family:'Inter',Arial,sans-serif;
+  }
+  .consent-bar p{margin:0;font-size:12.5px;color:var(--muted);line-height:1.6;max-width:600px;}
+  .consent-bar button{
+    display:block;
+    font-family:'JetBrains Mono',Arial,sans-serif;
+    font-size:12.5px;
+    font-weight:500;
+    background:transparent;
+    border:1px solid ;
+    border-color:var(--signal);
+    border-radius: 0px;
+    color: var(--signal);
+    padding:9px 16px;
+    cursor:pointer;
+    margin-top:8px;
+    margin-bottom:24px;
+  }
+  .consent-bar button:hover{background:var(--signal);color:#060707}
+  .consent-bar.granted{display:none;}
+
+  .stage{
+    position:relative;
+    background:var(--card);
+    border:0px solid var(--line);
+    border-radius:0px;
+    box-shadow:0 1px 2px rgba(10,30,43,0.04);
+    overflow:hidden;
+  }
+  .track{
+    display:flex;
+    transition:transform 0.45s cubic-bezier(.65,0,.35,1);
+  }
+  .pair{
+    flex:0 0 100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    background:transparent;
+    min-height:320px;
+  }
+  .slot{
+    background:var(--card);
+    display:flex;
+    flex-direction:column;
+    min-height:320px;
+  }
+ 
+.slot-content{flex:1;display:flex;flex-direction:column;min-height:0;}
+
+.slot-embed{flex:1;display:flex;}
+
+  .slot-embed iframe{width:100%;border:none;min-height:320px;}
+
+
+  .slot-label{
+  font-family:'JetBrains Mono',Arial,sans-serif;
+  font-size:13px;
+  font-weight:300;
+  color:var(--accent);
+  background:var(--accent-dim);
+  border-bottom:1px solid var(--line);
+  padding:8px 14px;
+}
+
+  .gate{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    padding:32px 24px;
+    text-align:center;
+    font-family:'Inter',Arial,sans-serif;
+    color:var(--muted);
+    background:#0B0F13;
+  }
+  .gate .num{font-family:'JetBrains Mono',Georgia,serif;font-size:24px;color:var(--accent);}
+  .gate p{margin:0;font-size:13px;line-height:1.6;max-width:280px;}
+  .gate .load-btn{
+    margin-top:6px;
+    font-family:'JetBrains Mono',Arial,sans-serif;
+    font-size:12.5px;
+    font-weight:400;
+    background:transparent;
+    color:var(--signal);
+    border:1px solid var(--signal);
+    padding:8px 16px;
+    border-radius:0px;
+    cursor:pointer;
+  }
+  .gate .load-btn:hover{background:var(--signal);color:var(--ink);}
+
+  .gate .placeholder-link{
+    font-size:11px;
+    color:var(--muted);
+    text-decoration:none;
+    border-bottom:1px solid var(--line);
+  }
+
+  .controls{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 18px;
+    border-top:1px solid var(--line);
+    font-family:'Inter',Arial,sans-serif;
+  }
+  .nav-btn{
+    width:34px;height:34px;border-radius:50%;
+    border:1px solid var(--muted);background:var(--card);
+    cursor:pointer;display:flex;align-items:center;justify-content:center;
+    color:var(--muted);font-size:16px;transition:border-color .2s, color .2s;
+  }
+  .nav-btn:hover{border-color:var(--signal);color:var(--signal);}
+  .nav-btn:disabled{opacity:0.3;cursor:default;}
+  .nav-btn:disabled:hover{border-color:var(--line);color:var(--ink);}
+
+  .dots{display:flex;gap:7px;}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--line);border:none;cursor:pointer;padding:0;transition:background .2s, transform .2s;}
+  .dot.active{background:var(--signal);transform:scale(1.3);}
+
+  .counter{font-size:11px;color:var(--muted);letter-spacing:0.05em;}
+
+  @media (max-width:640px){
+  .pair{grid-template-columns:1fr;min-height:auto;}
+  .slot{min-height:220px;}
+  .slot-embed iframe{min-height:220px;}
+  .gate .num{font-family:'JetBrains Mono',Georgia,serif;font-size:18px;color:var(--accent);}
+}
