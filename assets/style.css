@@ -222,7 +222,7 @@
   /* ---------- SIDE LINKS (Blog / Newsletter) ---------- */
   .side-links{
     position:fixed; left:0; top:50%; transform:translateY(-50%);
-    z-index:90; display:flex; flex-direction:column; gap:2px;
+    z-index:90; display:flex; flex-direction:column; align-items:flex-start; gap:2px;
   }
   .side-links a{
     writing-mode:vertical-rl; text-orientation:mixed; text-decoration:none;
