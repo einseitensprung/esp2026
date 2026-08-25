@@ -207,6 +207,24 @@
   }
   @media (max-width:1000px){ .rail{display:none;} }
 
+  /* ---------- SIDE LINKS (Blog / Newsletter) ---------- */
+  .side-links{
+    position:fixed; left:0; top:50%; transform:translateY(-50%);
+    z-index:90; display:flex; flex-direction:column; gap:2px;
+  }
+  .side-links a{
+    writing-mode:vertical-rl; text-orientation:mixed; text-decoration:none;
+    font-family:var(--mono); font-size:.78rem; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--text); background:var(--ink-soft);
+    border:1px solid var(--ink-line); border-left:none;
+    border-radius:0 8px 8px 0; padding:14px 7px;
+    transition:background .15s, color .15s, padding-left .15s, border-color .15s;
+  }
+  .side-links a:hover, .side-links a:focus-visible{
+    color:var(--ink); background:var(--accent); border-color:var(--accent); padding-left:11px;
+  }
+  @media (max-width:1000px){ .side-links{display:none;} }
+
   /* ---------- HERO ---------- */
   .hero{
     min-height:100svh; display:flex; flex-direction:column; justify-content:center;
