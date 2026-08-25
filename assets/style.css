@@ -173,7 +173,10 @@
   }
   .nav-cta:hover{border-color:var(--accent); color:var(--accent);}
   .navburger{display:none; flex-direction:column; gap:5px; cursor:pointer; z-index:200;}
-  .navburger span{width:22px; height:2px; background:var(--text);}
+  .navburger span{width:22px; height:2px; background:var(--text); transition:transform .25s ease, opacity .25s ease;}
+  .navburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .navburger.open span:nth-child(2){opacity:0;}
+  .navburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
   .navlinks-extra{display:none;}
 
   @media (max-width:860px){

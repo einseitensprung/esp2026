@@ -3,8 +3,12 @@
   const navlinks = document.getElementById('navlinks');
   burger.addEventListener('click', () => {
     navlinks.classList.toggle('open');
+    burger.classList.toggle('open');
   });
-  navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navlinks.classList.remove('open')));
+  navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navlinks.classList.remove('open');
+    burger.classList.remove('open');
+  }));
 
   // client ticker content
   const clients = ["A1","Abarth","accenture","Alfa Romeo","Allianz","At Court Thirteen","Attensam","Autohaus Schmid-Fally","Bank Austria","Billa","Casinos Austria","Deutsche Bank","Deutsche Krebsgesellschaft","Die Presse","DSV Fortuna 05","Erste Bank","EVN","Fiat","Gesund ist Besser","Heinemann","Hummingbird21","Hyundai","indeed!","ITZ Projects","Jaguar","KIA","Kleine Zeitung","Land Rover","Lanxess","Leaseplan","LEXUS","Lungenordination Baden","MABES","MAZDA","Novartis","OMV","Opel","Österr. Gehörlosenbund","Österr. Volksliedwerk","PARAGON","PE-IMMO","Peter Frey Gallery","Peugeot","Pfarre Perchtholdsdorf","Post","Renault","SALT Salzburg","Samsung","Schöpping","Stellantis","Style in Progress","T-Mobile","TBWA","Technisches Museum Wien","Theresa Feyertag","TOYOTA","TTTech","Unisys","Volkshilfe NÖ","VOLVO","W24","Wiener Bühnenverein","WKO Wien"];
