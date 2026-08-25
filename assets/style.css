@@ -173,7 +173,7 @@
   }
   .nav-cta:hover{border-color:var(--accent); color:var(--accent);}
   .navburger{display:none; flex-direction:column; gap:5px; cursor:pointer; z-index:200;}
-  .navburger span{width:22px; height:1.5px; background:var(--text);}
+  .navburger span{width:22px; height:2px; background:var(--text);}
   .navlinks-extra{display:none;}
 
   @media (max-width:860px){
